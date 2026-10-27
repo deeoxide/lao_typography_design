@@ -1,0 +1,30 @@
+{
+  "name": "lao-typography-skill",
+  "description": "Lao language and typography agent instructions with consonant and vowel reference charts.",
+  "pathBase": "project-root",
+  "sourceCredit": {
+    "authorAsStated": "Deeoxide",
+    "yearAsStated": 2026,
+    "licenseAsStated": "MIT",
+    "licenseFilePresentAtInventory": false,
+    "source": "CLAUDE/README.md"
+  },
+  "files": [
+    { "path": "Agents/english-lao-translator.md", "role": "English-to-Lao translation" },
+    { "path": "Agents/lao-english-translator.md", "role": "Lao/English translation" },
+    { "path": "Agents/lao-font-designer.md", "role": "Lao typeface design and review" },
+    { "path": "Agents/lao-graphic-designer.md", "role": "Lao graphic design" },
+    { "path": "Agents/lao-letter-professor.md", "role": "Lao alphabet teaching" },
+    { "path": "Agents/lao-ocr-reader.md", "role": "Lao image transcription" },
+    { "path": "Agents/lao-typography-checker.md", "role": "Lao typography review" },
+    { "path": "Agents/lao-unicode-font-engineer.md", "role": "Unicode and font engineering" },
+    { "path": "Agents/lao-voice-specialist.md", "role": "Lao spoken and writing voice" },
+    { "path": "Agents/lao-web-designer.md", "role": "Lao web design" },
+    { "path": "CLAUDE/CLAUDE.md", "role": "Shared project guidance" },
+    { "path": "CLAUDE/README.md", "role": "Original overview and setup instructions" },
+    { "path": "Image_consonnes_voyelles/langue-lao-consonnes.gif", "role": "Consonant reference chart" },
+    { "path": "Image_consonnes_voyelles/langue-lao-voyelles.gif", "role": "Vowel reference chart" }
+  ],
+  "referencedFilesAbsentAtInventory": ["lao_letter.json", "LICENSE", "AUTHORS.md"],
+  "referencedDocumentsNotIncluded": ["Lao alphabet", "Lao vowel", "Lao typography"]
+}
