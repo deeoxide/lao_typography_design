@@ -11,6 +11,8 @@ This folder is a collection of Claude agent instructions and reference images fo
 | [Image_consonnes_voyelles/](Image_consonnes_voyelles/) | Two reference charts: Lao consonants and vowels. |
 | [Package/](Package/) | Package context, source inventory, and ten separate Lao skills. |
 | [bin/](bin/) | A PowerShell utility to inspect the inventory and report missing files. |
+| [lao_typography_design/](lao_typography_design/) | The `lao_typography_design` skill: `SKILL.md` for Claude, `AGENTS.md` for Codex and other coding agents, and the `Lao alphabet`, `Lao vowel`, and `Lao typography` reference notes. |
+| [lao_typography_design.skill](lao_typography_design.skill) | The same folder packaged as a zip, ready to upload as a skill. |
 
 ## Start here
 
@@ -26,7 +28,7 @@ To check the contents from PowerShell in this folder:
 
 ## Gaps in this copy
 
-The original documentation mentions `lao_letter.json`, `LICENSE`, and `AUTHORS.md`, but these files are absent. It also refers to knowledge documents titled `Lao alphabet`, `Lao vowel`, and `Lao typography`; separate documents with those titles are not included. The GIF charts are present, but have not been transcribed into structured letter data.
+The original documentation mentions `lao_letter.json`, `LICENSE`, and `AUTHORS.md`, but these files are absent. The knowledge documents titled `Lao alphabet`, `Lao vowel`, and `Lao typography` are now in [lao_typography_design/references/](lao_typography_design/references/). The GIF charts are present, but have not been transcribed into structured letter data.
 
 The original README credits Deeoxide (2026) and states MIT licensing. The actual license file is not included in this copy. See the source documentation for its authorship and third-party material notes.
 
