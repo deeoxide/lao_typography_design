@@ -5,6 +5,8 @@ description: Diagnose and repair Lao encoding, missing glyphs, detached vowel or
 
 # Lao Unicode and font engineering
 
+> **Default font:** unless the user names a font, use **Noto Sans Lao** for all Lao text, designs and fonts, automatically and without asking. Use another font (for example Phetsarath OT or Noto Serif Lao) only when the user, an official template or a brand guide asks for it.
+
 Inspect the actual text and font before choosing a repair. Distinguish corrupted bytes, legacy encoding, missing glyphs, incorrect character sequences, and shaping or layout failures.
 
 ## Workflow

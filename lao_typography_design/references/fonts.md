@@ -1,9 +1,12 @@
 # Bundled Lao fonts
 
+**Default: Noto Sans Lao** (`NotoSansLao-VariableFont_wdthwght.ttf`, SIL OFL 1.1, weights 100–900, widths 62.5–100, complete Lao set). Use it automatically whenever the user does not name a font. The display fonts below are for when the user asks for them or for a specific look.
+
 Font files are in `assets/fonts/`. Each one has OpenType shaping (GSUB and GPOS tables), so Lao vowels and tone marks stack correctly in shaping-capable tools. None of them includes Thai glyphs. For Thai text, set a separate Thai font.
 
 | File | Family name (as installed) | Weight | Style | Best for |
 |---|---|---|---|---|
+| `NotoSansLao-VariableFont_wdthwght.ttf` | Noto Sans Lao (variable, wght 100–900) | 400 | Loopless, clean, neutral. **Default.** | Everything unless another font is named: body text, documents, slides, web, UI, signage |
 | `Lao_Chanthavy.otf` | Lao_Chanthavy | 500 | Loopless, heavy, modern | Headlines, posters, social graphics |
 | `Lao_Dokkham.ttf` | Lao_Dokkham | 400 | Looped, slanted, bold | Decorative headings, invitations |
 | `Lao_Handwriting14.ttf` | Lao_Handwriting14 | 400 | Looped handwriting, upright | Friendly body text in short pieces, greeting cards |
@@ -13,20 +16,20 @@ Font files are in `assets/fonts/`. Each one has OpenType shaping (GSUB and GPOS 
 
 ## Choosing a font
 
-- These are display fonts. For long body text, formal letters, and official documents, use Phetsarath OT or Noto Sans Lao, then use a bundled font for titles only.
+- These are display fonts. For long body text, formal letters, and official documents, use the default, Noto Sans Lao (or Phetsarath OT if the user or an official template asks for it), then use a display font for titles only when asked.
 - Pair one bundled display font with one plain text font. Do not mix two bundled display fonts on one page.
 - Only PB Warnjai has a true Bold. Do not apply faux bold or italic to any of them.
 - The Latin letters and digits in these fonts are basic. In bilingual layouts, set English in a separate Latin font.
 
 ## Character coverage
 
-All six fonts cover the 27 standard consonants, ໜ, ໝ, all vowels, all tone marks, and Lao digits. This covers modern everyday Lao. They are missing some rarer characters:
+All seven display and text fonts cover the 27 standard consonants, ໜ, ໝ, all vowels, all tone marks, and Lao digits. This covers modern everyday Lao. They are missing some rarer characters:
 
 - **Lao_Dokkham, Lao_Handwriting14:** missing ຌ ຏ ຐ ຑ ຒ (Pali/Sanskrit letters) and ໞ ໟ (Khmu letters).
 - **Lao_Chanthavy, Lao_Handwriting17, Lao_Samakhee:** missing the Pali/Sanskrit letters ຆ ຉ ຌ ຎ ຏ ຐ ຑ ຒ ຓ ຘ ຠ ຨ ຩ ຬ, the mark ◌໎, and ໞ ໟ.
 - **PB Warnjai:** missing the same Pali/Sanskrit letters and ◌໎, plus the Pali virama ◌຺.
 
-For Buddhist texts, Pali terms, or minority-language text, use Noto Sans Lao or Phetsarath OT.
+For Buddhist texts, Pali terms, or minority-language text, use Noto Sans Lao (the default; it has every assigned Lao letter).
 
 ## Using the fonts
 

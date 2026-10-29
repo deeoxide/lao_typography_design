@@ -5,6 +5,8 @@ description: Build or improve web interfaces containing Lao text, including webf
 
 # Lao web design
 
+> **Default font:** unless the user names a font, use **Noto Sans Lao** for all Lao text, designs and fonts, automatically and without asking. Use another font (for example Phetsarath OT or Noto Serif Lao) only when the user, an official template or a brand guide asks for it.
+
 Work within the user's framework and existing design system. Preserve supplied Lao wording unless copy changes are requested.
 
 ## Implementation

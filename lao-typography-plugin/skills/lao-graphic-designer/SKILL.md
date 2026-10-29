@@ -5,6 +5,8 @@ description: Create or improve posters, packaging, branding, and graphic layouts
 
 # Lao graphic design
 
+> **Default font:** unless the user names a font, use **Noto Sans Lao** for all Lao text, designs and fonts, automatically and without asking. Use another font (for example Phetsarath OT or Noto Serif Lao) only when the user, an official template or a brand guide asks for it.
+
 Build around the supplied copy, dimensions, audience, and output format. Preserve approved wording and brand requirements.
 
 ## Text and artwork

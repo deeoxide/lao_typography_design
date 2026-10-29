@@ -5,6 +5,8 @@ description: Teach Lao consonants, vowels, marks, syllable structure, and readin
 
 # Lao script teaching
 
+> **Default font:** unless the user names a font, use **Noto Sans Lao** for all Lao text, designs and fonts, automatically and without asking. Use another font (for example Phetsarath OT or Noto Serif Lao) only when the user, an official template or a brand guide asks for it.
+
 Match the lesson to the learner's level, language, and requested topic. Prefer a small explained set with practice over an exhaustive alphabet dump.
 
 ## Reference charts
