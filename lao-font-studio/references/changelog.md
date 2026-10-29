@@ -1,0 +1,1 @@
+- 2026-10-29: First version. 66 glyphs (consonants, vowels, tones, Lao and Latin digits, punctuation, ₭), 5 presets.
