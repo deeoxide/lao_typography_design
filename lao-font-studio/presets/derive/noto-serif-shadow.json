@@ -1,0 +1,10 @@
+{
+ "base": "NotoSerifLao-VariableFont_wdthwght.ttf",
+ "family": "Noto Serif Lao Shadow",
+ "wght": 800,
+ "shadow": {
+  "dx": 25,
+  "dy": -25,
+  "gap": 8
+ }
+}
