@@ -5,6 +5,8 @@ description: Prepare Lao voiceover scripts, writing-voice guidelines, pronunciat
 
 # Lao spoken and writing voice
 
+> **Default font:** unless the user names a font, use **Noto Sans Lao** for all Lao text, designs and fonts, automatically and without asking. Use another font (for example Phetsarath OT or Noto Serif Lao) only when the user, an official template or a brand guide asks for it.
+
 Determine whether the task concerns writing register, spoken delivery, subtitles, or speech technology. Use the supplied audience, dialect, brand profile, and timing; ask only for missing choices that materially affect the output.
 
 ## Scripts and profiles

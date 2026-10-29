@@ -1,5 +1,7 @@
 # Provided fonts (from Deeoxide)
 
+**Default base: Noto Sans Lao.** It is used automatically whenever a prompt names no font.
+
 Eight Lao fonts are bundled in `assets/reference-fonts/`. They have four uses in this skill:
 
 1. **Base fonts for Derive mode.** When the user asks for a font "as", "in", "from" or "based on" one of these, `scripts/derive_font.py` restyles that font's real letter shapes (weight, width, slant, rounding, outline, inline, shadow, roughness). The output keeps the font's characters, ligatures and mark positioning. Examples are in `presets/derive/` and `specimens/derived-examples.png`.
@@ -18,7 +20,7 @@ Eight Lao fonts are bundled in `assets/reference-fonts/`. They have four uses in
 | `NotoSansLao-VariableFont_wdthwght.ttf` | Noto Sans Lao | Clean, neutral, loopless sans; full Lao set | none | upright | `noto-sans-black`, `noto-sans-outline-slant` | `modern-sans` |
 | `NotoSerifLao-VariableFont_wdthwght.ttf` | Noto Serif Lao | Traditional looped serif-style Lao, book colour; full Lao set | yes | upright | `noto-serif-light-narrow`, `noto-serif-shadow` | `classic-looped` |
 
-The two Noto fonts are **variable fonts** with weight 100–900 (`wght`, default 400) and width 62.5–100 (`wdth`, default 100). In a Derive recipe, `wght` and `wdth` pick the instance before the other effects are applied, so `{"base": "NotoSerifLao-VariableFont_wdthwght.ttf", "wght": 200, "wdth": 70}` is a light, narrow serif. Use these two as the default bases for body text and long documents, because they are complete (every Lao letter, including the Pali/Sanskrit ones and ◌໎), shape correctly everywhere, and are open licensed.
+The two Noto fonts are **variable fonts** with weight 100–900 (`wght`, default 400) and width 62.5–100 (`wdth`, default 100). In a Derive recipe, `wght` and `wdth` pick the instance before the other effects are applied, so `{"base": "NotoSerifLao-VariableFont_wdthwght.ttf", "wght": 200, "wdth": 70}` is a light, narrow serif. Noto Sans Lao is the default base for every prompt that names no font; Noto Serif Lao is the base for looped, book-style text when named or asked for. Both are good bases for body text and long documents, because they are complete (every Lao letter, including the Pali/Sanskrit ones and ◌໎), shape correctly everywhere, and are open licensed.
 
 All eight also contain Latin letters and punctuation, which Derive mode restyles along with the Lao.
 

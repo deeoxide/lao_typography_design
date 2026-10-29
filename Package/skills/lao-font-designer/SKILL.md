@@ -5,9 +5,13 @@ description: Design, select, develop, and test Lao typefaces, including font set
 
 # Lao typeface design
 
+> **Default font:** unless the user names a font, use **Noto Sans Lao** for all Lao text, designs and fonts, automatically and without asking. Use another font (for example Phetsarath OT or Noto Serif Lao) only when the user, an official template or a brand guide asks for it.
+
 Establish the target use, sizes, style, weights, and rendering environments from the brief. Distinguish a design specification from an implemented font; do not describe a written brief as a working font file.
 
 ## Choose the workflow
+
+- **Build a new or restyled font from a prompt:** use the `lao-font-studio` skill. It builds from Noto Sans Lao automatically when no font is named.
 
 - **Create or modify a font:** develop glyph outlines, character mapping, spacing, anchors, shaping, and metrics in an available font-authoring toolchain. Artwork drawn in an external design app is an input to this process; exporting SVG or PDF does not by itself create a usable OTF or TTF font. Build and validate the font before testing it in target apps.
 - **Use a font in an external app:** establish the exact app, version, desktop/browser environment, and font file or family. Read the relevant section of [external-apps.md](references/external-apps.md) for Adobe, Figma, or Canva setup, text styles, and export checks. Preserve the user's chosen application.

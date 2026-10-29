@@ -21,7 +21,7 @@ Read the reference that matches the task before writing or typesetting. Load onl
 
 ## Core rules (always apply)
 
-1. Lao is a complex script. Use a font with proper OpenType shaping (Phetsarath OT, Noto Sans Lao) and a shaping-capable tool. For titles and design work, the bundled fonts in `assets/fonts/` are available; see `references/fonts.md`.
+1. **Default font: Noto Sans Lao.** Use it automatically for any Lao text, document, slide, page or design whenever the user does not name a font (file: `assets/fonts/NotoSansLao-VariableFont_wdthwght.ttf`; weights 100–900). Switch only when the user, an official template or a brand guide names another font (Phetsarath OT, Noto Serif Lao, a bundled display font). Lao is a complex script, so always use a shaping-capable tool. Other bundled fonts are in `assets/fonts/`; see `references/fonts.md`.
 2. Line height 1.5 or more. Letter-spacing 0. No italic or faux bold. Prefer left alignment.
 3. Never split a vowel sign or tone mark from its consonant, and never cut text in the middle of a syllable.
 4. Prefixed vowels (ເ ແ ໂ ໄ ໃ) are written before the consonant but read after it.

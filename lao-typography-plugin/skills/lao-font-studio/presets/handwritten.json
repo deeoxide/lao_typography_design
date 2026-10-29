@@ -1,0 +1,11 @@
+{
+ "family": "Lao Studio Hand",
+ "weight": 60,
+ "roughness": 9,
+ "seed": 3,
+ "loops": "ring",
+ "loop_size": 60,
+ "slant": 4,
+ "width": 1.05,
+ "sidebearing": 35
+}

@@ -1,0 +1,5 @@
+- 2026-10-29: First version. 66 glyphs (consonants, vowels, tones, Lao and Latin digits, punctuation, ₭), 5 presets.
+- 2026-10-29: Added 6 user-provided reference fonts (assets/reference-fonts), like-* presets matched to each, proof.py --compare, mark weight cap for heavy styles.
+- 2026-10-29: Added Derive mode (scripts/derive_font.py): redesign the provided fonts' real outlines (weight, width, slant, round, outline, inline, shadow, roughness) keeping GSUB/GPOS; presets/derive examples.
+- 2026-10-29: Added Noto Sans Lao and Noto Serif Lao (variable, OFL) as bases; derive_font.py takes wght/wdth to instantiate them; 4 noto derive presets.
+- 2026-10-29: Noto Sans Lao is now the default base whenever no font is named (derive_font.py default, SKILL.md rule, default-noto-sans preset).
