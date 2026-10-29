@@ -25,6 +25,20 @@ MANIFEST = {
     "skills": "./skills/",
 }
 
+INTERFACE = {
+    "displayName": "Lao Typography",
+    "shortDescription": "Lao language, typography and a font studio that builds Lao fonts from a prompt.",
+    "longDescription": "Skills for professional Lao (ພາສາລາວ) work: Lao/English translation, proofreading and typesetting "
+                       "to Lao typography rules, OCR, spoken and written voice, web and graphic design, Unicode and font "
+                       "engineering, alphabet teaching, and a Lao font studio that creates new Lao fonts or redesigns "
+                       "bundled Lao fonts into working TTF/WOFF2 files.",
+    "developerName": "Deeoxide",
+    "category": "Productivity",
+    "capabilities": ["Read", "Write"],
+    "websiteURL": "https://github.com/deeoxide/lao_typography_design",
+    "defaultPrompt": ["Design a Lao font for a coffee shop menu, friendly and handmade."],
+}
+
 def copy(src, dst):
     shutil.copytree(src, dst, ignore=shutil.ignore_patterns("__pycache__", "*.pyc", ".DS_Store"))
 
@@ -38,8 +52,11 @@ for n in sorted(os.listdir(pk)):
 
 for d in (".claude-plugin", ".codex-plugin", ".agent-plugin"):
     os.makedirs(os.path.join(OUT, d))
+    m = dict(MANIFEST)
+    if d != ".claude-plugin":      # Codex and Agent manifests require an interface block
+        m["interface"] = INTERFACE
     with open(os.path.join(OUT, d, "plugin.json"), "w", encoding="utf-8") as f:
-        json.dump(MANIFEST, f, ensure_ascii=False, indent=2); f.write("\n")
+        json.dump(m, f, ensure_ascii=False, indent=2); f.write("\n")
 shutil.copy(os.path.join(ROOT, "LICENSE"), os.path.join(OUT, "LICENSE"))
 with open(os.path.join(OUT, "README.md"), "w", encoding="utf-8") as f:
     f.write("# lao-typography plugin\n\nSkills for Lao language, typography and font design. "
