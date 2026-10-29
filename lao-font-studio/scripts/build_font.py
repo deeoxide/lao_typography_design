@@ -137,7 +137,8 @@ def build(st, outdir, woff2=False):
     kx = ky * st["width"]
     rnd = random.Random(st["seed"])
     pen = Pen(st)
-    mark_pen = Pen(st, st["mark_weight"])
+    # marks stay legible on heavy fonts: never thicker than 12% of the x-height
+    mark_pen = Pen(st, min(st["mark_weight"], 0.12 * X / W))
     km = X / 500.0 * st["mark_scale"]
     loop_pen = Pen(st, st["loop_weight"])
     looped = st["loops"] in ("ring", "solid")

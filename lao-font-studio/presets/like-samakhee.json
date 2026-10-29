@@ -1,0 +1,13 @@
+{
+ "family": "Studio Lao Unity",
+ "weight": 140,
+ "xheight": 600,
+ "loops": "ring",
+ "loop_size": 44,
+ "loop_weight": 0.65,
+ "slant": 10,
+ "contrast": 0.7,
+ "pen_angle": 20,
+ "width": 1.1,
+ "sidebearing": 28
+}

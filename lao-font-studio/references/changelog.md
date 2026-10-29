@@ -1,1 +1,2 @@
 - 2026-10-29: First version. 66 glyphs (consonants, vowels, tones, Lao and Latin digits, punctuation, ₭), 5 presets.
+- 2026-10-29: Added 6 user-provided reference fonts (assets/reference-fonts), like-* presets matched to each, proof.py --compare, mark weight cap for heavy styles.
