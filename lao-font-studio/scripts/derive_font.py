@@ -12,6 +12,8 @@ RECIPE.json keys:
   base        path to the base font, or a bare file name looked up in assets/reference-fonts/
   family      new family name (required); style_name (default "Regular")
   designer    credit (default "Deeoxide with Claude")
+  wght, wdth  for variable bases (Noto Sans Lao, Noto Serif Lao): pick the instance first.
+              wght 100-900 (default 400), wdth 62.5-100 (default 100). Then the effects below apply.
   weight      make strokes heavier (+) or lighter (-), in units per 1000 em (e.g. +25, -10)
   width       horizontal scale of letters and spacing (default 1.0)
   slant       slant in degrees, positive leans right (default 0)
@@ -128,6 +130,12 @@ def derive(st, outdir, woff2=False):
     base = st["base"]
     if not os.path.exists(base): base = os.path.join(REF_DIR, base)
     src = TTFont(base)
+    if "fvar" in src:
+        from fontTools.varLib import instancer
+        axes = {a.axisTag: a.defaultValue for a in src["fvar"].axes}
+        for tag in ("wght", "wdth"):
+            if tag in st: axes[tag] = st[tag]
+        src = instancer.instantiateVariableFont(src, axes, inplace=False, updateFontNames=False)
     upm = src["head"].unitsPerEm; k = upm / 1000.0
     gs = src.getGlyphSet(); order = src.getGlyphOrder()
     cmap = src.getBestCmap()
@@ -197,12 +205,16 @@ def derive(st, outdir, woff2=False):
     ps = re.sub(r"[^A-Za-z0-9-]", "", family.replace(" ", "")) + "-" + re.sub(r"[^A-Za-z0-9]", "", sty)
     src_family = src["name"].getDebugName(1) or os.path.basename(base)
     src_copy = src["name"].getDebugName(0) or ""
-    fb.setupNameTable(dict(copyright=(src_copy + " " if src_copy else "") +
+    lic_text = src["name"].getDebugName(13); lic_url = src["name"].getDebugName(14)
+    names = dict(copyright=(src_copy + " " if src_copy else "") +
                            f"Modified version of {src_family}.",
                            familyName=family, styleName=sty, uniqueFontIdentifier=ps + "-1.0",
                            fullName=f"{family} {sty}", psName=ps, version="Version 1.000",
                            designer=st["designer"], manufacturer=st["designer"],
-                           description=f"Derived from {src_family} with the lao-font-studio skill"))
+                           description=f"Derived from {src_family} with the lao-font-studio skill")
+    if lic_text: names["licenseDescription"] = lic_text   # keep the base font's licence text (e.g. SIL OFL)
+    if lic_url: names["licenseInfoURL"] = lic_url
+    fb.setupNameTable(names)
     os2 = copy.deepcopy(src["OS/2"])
     os2.usWinAscent = max(os2.usWinAscent, ymax); os2.usWinDescent = max(os2.usWinDescent, -ymin)
     if st["slant"]: os2.fsSelection = (os2.fsSelection | 0x01) & ~0x40
