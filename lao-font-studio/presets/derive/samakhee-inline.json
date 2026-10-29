@@ -1,0 +1,9 @@
+{
+ "base": "Lao_Samakhee.otf",
+ "family": "Samakhee Inline",
+ "inline": {
+  "inset": 20,
+  "line": 10
+ },
+ "weight": 15
+}
