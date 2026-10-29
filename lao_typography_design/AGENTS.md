@@ -46,7 +46,3 @@ When the user asks for a styled Lao title (stroke, shadow, slant, gradient):
 3. Confirm no text is clipped at any edge.
 4. Confirm the right font was applied and embedded (PDF) or loaded (web).
 5. Report any text you could not confirm.
-
-## Brand context (Family Studio)
-
-Family Studio and Cupfee documents often need Lao, Thai, and English in one file. Keep the three languages in separate blocks, with a font set for each, and keep punctuation, numbers, and dates consistent across them.
