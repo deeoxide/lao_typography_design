@@ -80,7 +80,7 @@ Tone = consonant class + syllable type + tone mark. Use a tone chart for exact p
 ## 6. Typesetting and AI notes
 
 - **Unicode order:** prefixed vowels (ເ ແ ໂ ໄ ໃ, U+0EC0–0EC4) come first in the text and appear before the consonant. Above and below signs follow the consonant. A tone mark follows the vowel sign.
-- **Fonts:** use a Lao font with proper OpenType shaping (Phetsarath OT, Noto Sans Lao). Without shaping, vowels and marks float or overlap.
+- **Fonts:** use a Lao font with proper OpenType shaping (default: Noto Sans Lao). Without shaping, vowels and marks float or overlap.
 - **Line height:** keep 1.5 or more. Stacked vowel signs and tone marks need vertical space.
 - **No letter-spacing.** It pulls the combining signs off their consonant.
 - **Do not cut in the middle of a syllable.** Never split a vowel or tone mark from its consonant when truncating or wrapping.

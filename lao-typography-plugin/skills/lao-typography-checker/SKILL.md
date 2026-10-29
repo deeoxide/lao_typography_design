@@ -5,6 +5,8 @@ description: Review Lao typography in documents, slides, PDFs, web pages, and de
 
 # Lao typography review
 
+> **Default font:** unless the user names a font, use **Noto Sans Lao** for all Lao text, designs and fonts, automatically and without asking. Use another font (for example Phetsarath OT or Noto Serif Lao) only when the user, an official template or a brand guide asks for it.
+
 Inspect the actual file and rendered output when available. Distinguish a content concern from a rendering defect and a stylistic preference. Do not claim visual verification from source code alone.
 
 ## Checks

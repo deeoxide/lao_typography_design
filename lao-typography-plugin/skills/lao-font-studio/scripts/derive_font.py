@@ -9,7 +9,8 @@ Usage:
   python3 derive_font.py RECIPE.json --out OUTDIR [--woff2]
 
 RECIPE.json keys:
-  base        path to the base font, or a bare file name looked up in assets/reference-fonts/
+  base        path to the base font, or a bare file name looked up in assets/reference-fonts/.
+              DEFAULT when omitted: NotoSansLao-VariableFont_wdthwght.ttf (Noto Sans Lao)
   family      new family name (required); style_name (default "Regular")
   designer    credit (default "Deeoxide with Claude")
   wght, wdth  for variable bases (Noto Sans Lao, Noto Serif Lao): pick the instance first.
@@ -39,7 +40,8 @@ from fontTools.fontBuilder import FontBuilder
 HERE = os.path.dirname(os.path.abspath(__file__))
 REF_DIR = os.path.join(HERE, "..", "assets", "reference-fonts")
 
-DEFAULTS = dict(style_name="Regular", designer="Deeoxide with Claude", weight=0, width=1.0, slant=0,
+DEFAULT_BASE = "NotoSansLao-VariableFont_wdthwght.ttf"   # used whenever the prompt names no font
+DEFAULTS = dict(base=DEFAULT_BASE, style_name="Regular", designer="Deeoxide with Claude", weight=0, width=1.0, slant=0,
                 round=0, outline=0, inline=None, shadow=None, roughness=0, seed=7, tracking=0, only=None)
 
 # ------------------------------------------------------------------ outline extraction

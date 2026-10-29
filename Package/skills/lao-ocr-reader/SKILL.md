@@ -5,6 +5,8 @@ description: Transcribe Lao from images, photographs, scans, and PDFs while pres
 
 # Lao image transcription
 
+> **Default font:** unless the user names a font, use **Noto Sans Lao** for all Lao text, designs and fonts, automatically and without asking. Use another font (for example Phetsarath OT or Noto Serif Lao) only when the user, an official template or a brand guide asks for it.
+
 Produce a faithful transcription before any requested translation or correction. Source spelling, numbers, and uncertainty must survive extraction.
 
 1. Inspect pages and layout. For a PDF, check whether the existing text layer is usable Lao Unicode; compare it with the rendered page before trusting it.

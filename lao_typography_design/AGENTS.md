@@ -15,7 +15,7 @@ Open the reference that matches the task before you write or typeset. Load only 
 
 ## Hard rules
 
-1. Lao is a complex script. Render it with a font that has OpenType shaping (Noto Sans Lao, Phetsarath OT) and a shaping-capable engine (Chromium, LibreOffice, WeasyPrint, XeTeX/LuaTeX). Do not use ReportLab, FPDF, or PIL text drawing for Lao.
+1. Lao is a complex script. Render it with a font that has OpenType shaping (default: Noto Sans Lao, used automatically unless the user names another font) and a shaping-capable engine (Chromium, LibreOffice, WeasyPrint, XeTeX/LuaTeX). Do not use ReportLab, FPDF, or PIL text drawing for Lao.
 2. Use Lao codepoints (U+0E80–U+0EFF) only. Never put Thai codepoints (U+0E00–U+0E7F) inside Lao text.
 3. Files are UTF-8. HTML gets `<meta charset="utf-8">` and `lang="lo"`. Tag Thai as `th` and English as `en`.
 4. Body text: line-height 1.5 or more, letter-spacing 0, left-aligned, true bold only. Lao has no italic tradition, so use bold, color, or size for emphasis unless the user asks for a slant.

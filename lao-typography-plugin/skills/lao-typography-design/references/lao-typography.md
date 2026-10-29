@@ -19,8 +19,8 @@ Lao is a **complex script**. Its letters, vowel signs, and tone marks must be sh
 
 | Use | Suggested fonts | Notes |
 |---|---|---|
-| Government, formal Word/Excel documents | **Phetsarath OT** | The standard text font for formal documents in Lao PDR. Regular and bold only. |
-| Web, apps, cross-platform | **Noto Sans Lao**, **Noto Sans Lao UI** | Open-source (SIL OFL), multiple weights, wide platform support. |
+| Government forms or templates that require it, only when the user or template asks | **Phetsarath OT** | The traditional text font for formal documents in Lao PDR. Regular and bold only. |
+| **Default for everything unless the user names a font**: documents, slides, web, apps, cross-platform | **Noto Sans Lao**, **Noto Sans Lao UI** | Open-source (SIL OFL), multiple weights, wide platform support. |
 | Print with a serif feel | **Noto Serif Lao** | Good for long text and reports. |
 | Windows / macOS system | **Lao UI**, **Lao Sangam MN** | Use as fallbacks. |
 | Other text faces | Saysettha OT, Dokchampa, Souliyo | Check weights and glyph coverage first. |
@@ -88,7 +88,7 @@ Use `<meta charset="utf-8">` and `lang="lo"`.
 
 **Word (.docx):** set the **complex script font** (cs) and **complex script size** (szCs), not just the Latin font. Set the language to Lao (lo-LA). Use styles, not manual formatting. Line spacing: multiple 1.5.
 
-**Excel (.xlsx):** apply Phetsarath OT to the used range. Set row heights manually (at least 1.4 times the font size) and widen columns. Avoid merged cells for long text.
+**Excel (.xlsx):** apply Noto Sans Lao (or the font the user names) to the used range. Set row heights manually (at least 1.4 times the font size) and widen columns. Avoid merged cells for long text.
 
 **PowerPoint (.pptx):** set the cs typeface on every run and in the theme. Body 20 pt or more, generous line spacing, no automatic shrink.
 

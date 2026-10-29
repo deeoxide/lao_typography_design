@@ -5,6 +5,8 @@ description: Translate English text and documents into natural Lao while preserv
 
 # English to Lao translation
 
+> **Default font:** unless the user names a font, use **Noto Sans Lao** for all Lao text, designs and fonts, automatically and without asking. Use another font (for example Phetsarath OT or Noto Serif Lao) only when the user, an official template or a brand guide asks for it.
+
 Use the supplied source, audience, and register. Default to professional, neutral Lao when context is limited; ask only when ambiguity materially changes meaning.
 
 - Restructure English phrasing into natural Lao without adding or dropping claims. Preserve headings, lists, tables, names, amounts, units, identifiers, and dates. Do not convert currencies or calendars unless requested.

@@ -1,20 +1,28 @@
 ---
 name: lao-font-studio
-description: Design and build Lao (ພາສາລາວ) fonts from a text prompt, either as new letters drawn from scratch or as redesigns of the user's own provided Lao fonts (Chanthavy, Dokkham, Handwriting14, Handwriting17, Samakhee, PB Warnjai, Noto Sans Lao, Noto Serif Lao). Use when asked to create, generate, design, freestyle or restyle a Lao typeface as a working TTF/WOFF2 font.
+description: Design and build Lao (ພາສາລາວ) fonts from a text prompt, either as new letters drawn from scratch or as redesigns of the user's own provided Lao fonts (Chanthavy, Dokkham, Handwriting14, Handwriting17, Samakhee, PB Warnjai, Noto Sans Lao, Noto Serif Lao). Use when asked to create, generate, design, freestyle or restyle a Lao typeface as a working TTF/WOFF2 font. Builds from Noto Sans Lao by default whenever the prompt does not name a font.
 ---
 
 # Lao Font Studio
 
 Turn a style brief into a real, installable Lao font (TTF, optional WOFF2) with correct vowel and tone-mark stacking, plus a specimen image.
 
+## Default font: Noto Sans Lao
+
+**Whenever the first prompt, or any later prompt, does not say which font to design from, use Noto Sans Lao (`NotoSansLao-VariableFont_wdthwght.ttf`) automatically.** Do not ask which font, and do not start from scratch or from another provided font. Apply the brief's style words as effects on Noto Sans Lao in Derive mode: bold or black → `wght` up to 900; light or thin → `wght` down to 100; condensed → `wdth` down to 62.5; italic or slanted → `slant`; rounded → `round`; outline, inline, shadow, rough or hand-cut → the matching effect. A brief with no style at all gets a clean regular Noto Sans Lao (`presets/derive/default-noto-sans.json`), still renamed to the user's wording.
+
+Only leave the default when the prompt:
+- names a different provided font ("like Dokkham", "from Noto Serif", "Warnjai bold") → Derive from that font; or
+- explicitly asks for brand-new letterforms ("draw original letters", "from scratch", "invent a new Lao typeface") → Create mode.
+
+In the delivery message, say in one line that Noto Sans Lao was used as the default base.
+
 ## Two ways to design
 
 | Mode | Use when the prompt… | Script | Result |
 |---|---|---|---|
-| **Derive** (from a provided font) | names one of the provided fonts, or asks for a font "in/as/from/based on" Dokkham, Warnjai, Noto Serif, etc. | `scripts/derive_font.py` | The provided font's real letter shapes, restyled: heavier or lighter, wider, slanted, rounded, outline, inline, shadow, rough. Keeps its full character set, ligatures and mark positioning. |
-| **Create** (from scratch) | asks for a new or original Lao font, or describes a style without naming a provided font | `scripts/build_font.py` | New letters drawn from this skill's own skeletons in any style. Lao letters only, plus Latin digits. |
-
-If the prompt is unclear, prefer **Derive** when one provided font is clearly close to the brief, because those fonts are complete and polished. Use **Create** for styles none of them fit.
+| **Derive** (default, from a provided font) | names no font (use Noto Sans Lao), or names one of the provided fonts ("in/as/from/based on" Dokkham, Warnjai, Noto Serif, etc.) | `scripts/derive_font.py` | The base font's real letter shapes, restyled: heavier or lighter, wider, slanted, rounded, outline, inline, shadow, rough. Keeps its full character set, ligatures and mark positioning. |
+| **Create** (from scratch, only when asked) | explicitly asks for new, original or from-scratch Lao letterforms | `scripts/build_font.py` | New letters drawn from this skill's own skeletons in any style. Lao letters only, plus Latin digits. |
 
 ## What's in the skill
 
@@ -34,10 +42,10 @@ Requirements: `pip install --break-system-packages fonttools shapely uharfbuzz p
 
 ## Workflow
 
-1. **Read the brief and pick the mode** (table above). Note the mood, use (headline, body text, logo, signage) and any provided font named. If the user gives no direction, choose boldly instead of asking; a font rebuilds in seconds.
+1. **Read the brief and pick the mode** (default font rule above). Note the mood, use (headline, body text, logo, signage) and any provided font named. If no font is named, the base is Noto Sans Lao. If the user gives no direction at all, choose boldly instead of asking; a font rebuilds in seconds.
 2. **Write the recipe JSON.** Give the new font its own family name (for example "Dokkham Festival Outline").
-   - Derive: set `base` to the font file name, then add effects. Typical values per 1000 em: `weight` −25 to +50, `width` 0.85–1.2, `slant` −8 to 12, `round` 5–20, `outline` 15–30, `inline` `{"inset": 15–25, "line": 6–12}`, `shadow` `{"dx": 20–40, "dy": −20 to −40, "gap": 6–12}`, `roughness` 3–10. Use `only` to restyle just some characters. For the variable Noto fonts, set `wght` (100–900) and `wdth` (62.5–100) first.
-   - Create: start from the nearest preset (a `like-*` one if the brief describes a provided font's look without asking to use it), then use the guide's vocabulary table. You can redraw letters with `glyphs`, add ornaments with `extra_strokes` and nudge single letters with `transform`.
+   - Derive: set `base` to the font file name (omit it to get the default, Noto Sans Lao), then add effects. Typical values per 1000 em: `weight` −25 to +50, `width` 0.85–1.2, `slant` −8 to 12, `round` 5–20, `outline` 15–30, `inline` `{"inset": 15–25, "line": 6–12}`, `shadow` `{"dx": 20–40, "dy": −20 to −40, "gap": 6–12}`, `roughness` 3–10. Use `only` to restyle just some characters. For the variable Noto fonts, set `wght` (100–900) and `wdth` (62.5–100) first.
+   - Create: start from the nearest preset (a `like-*` one if the brief describes a provided font's look), then use the guide's vocabulary table. You can redraw letters with `glyphs`, add ornaments with `extra_strokes` and nudge single letters with `transform`.
 3. **Build:**
    ```bash
    python3 scripts/derive_font.py recipe.json --out out/ --woff2     # Derive
