@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 """Render a specimen PNG and run shaping checks for a built Lao font.
 
-Usage: python3 proof.py FONT.ttf --out specimen.png [--text "custom Lao text"]
+Usage: python3 proof.py FONT.ttf --out specimen.png [--text "custom Lao text"] [--compare REF.ttf]
+--compare renders each line in a reference font (grey) under the generated font, for
+judging mood, weight and proportion side by side.
 Checks: missing glyphs (.notdef) after HarfBuzz shaping, marks that did not get
 GPOS-positioned, and marks colliding with each other in stacked clusters.
 """
@@ -32,22 +34,27 @@ def check(path, texts):
 
 def main():
     ap = argparse.ArgumentParser(); ap.add_argument("font"); ap.add_argument("--out", default="specimen.png")
-    ap.add_argument("--text", default=None); a = ap.parse_args()
+    ap.add_argument("--text", default=None); ap.add_argument("--compare", default=None); a = ap.parse_args()
     body = [CONSONANTS, VOWELS, TONES, DIGITS] + LINES
     if a.text: body = [a.text] + body
     sizes = [54]*4 + [64, 54, 54, 54]
     if a.text: sizes = [80] + sizes
     W = 1800; pad = 40
-    H = pad + sum(int(s*2.1) for s in sizes) + 80
+    step = 3.4 if a.compare else 2.1
+    H = pad + sum(int(s*step) for s in sizes) + 80
     im = Image.new("RGB", (W, H), "white"); d = ImageDraw.Draw(im)
     lbl = ImageFont.load_default()
     y = pad
-    d.text((pad, 10), a.font.split("/")[-1], fill=(120, 120, 120), font=lbl)
+    d.text((pad, 10), a.font.split("/")[-1] + ("   vs   " + a.compare.split("/")[-1] + " (grey)" if a.compare else ""),
+           fill=(120, 120, 120), font=lbl)
     for t, s in zip(body, sizes):
         f = ImageFont.truetype(a.font, s, layout_engine=ImageFont.Layout.RAQM)
         d.line([(pad, y + int(s*1.1)), (W - pad, y + int(s*1.1))], fill=(255, 215, 215))
         d.text((pad, y), t, font=f, fill="black", language="lo")
-        y += int(s*2.1)
+        if a.compare:
+            rf = ImageFont.truetype(a.compare, s, layout_engine=ImageFont.Layout.RAQM)
+            d.text((pad, y + int(s*1.45)), t, font=rf, fill=(150, 150, 150), language="lo")
+        y += int(s*step)
     im.save(a.out)
     issues = check(a.font, body)
     print(a.out); print("\n".join(issues) if issues else "shaping check: OK (no missing glyphs)")
