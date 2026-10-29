@@ -1,0 +1,12 @@
+{
+ "family": "Lao Studio Block",
+ "style_name": "Bold",
+ "weight": 130,
+ "cap": "square",
+ "join": "mitre",
+ "loops": "solid",
+ "loop_size": 40,
+ "width": 1.15,
+ "sidebearing": 30,
+ "mark_weight": 0.7
+}

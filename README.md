@@ -33,3 +33,9 @@ The original documentation mentions `lao_letter.json`, `LICENSE`, and `AUTHORS.m
 The original README credits Deeoxide (2026) and states MIT licensing. The actual license file is not included in this copy. See the source documentation for its authorship and third-party material notes.
 
 The original folders remain the source of truth. `Package` indexes their contents and holds standalone skill adaptations; the teaching skill includes copies of the reference charts. `bin` contains utilities, not discarded files.
+
+## Plugin
+
+`lao-typography-plugin/` is the installable plugin (manifests in `.claude-plugin/`, `.codex-plugin/` and `.agent-plugin/`, skills in `skills/*/SKILL.md`). `lao-typography-plugin.zip` is the same plugin zipped with the manifests at the top level, ready to upload. Rebuild both from the sources in this repo with `python3 bin/build_plugin.py`.
+
+In Claude Code: `/plugin marketplace add deeoxide/lao_typography_design`, then `/plugin install lao-typography@deeoxide-lao`.

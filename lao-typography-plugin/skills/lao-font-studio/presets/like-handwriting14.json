@@ -1,0 +1,12 @@
+{
+ "family": "Studio Lao Pen",
+ "weight": 95,
+ "xheight": 600,
+ "loops": "ring",
+ "loop_size": 48,
+ "loop_weight": 0.75,
+ "contrast": 0.55,
+ "pen_angle": 0,
+ "width": 1.05,
+ "sidebearing": 35
+}
