@@ -53,6 +53,8 @@ Read this before changing glyph skeletons or inventing a new style. It lists wha
 | condensed, narrow | width 0.8 to 0.9, sidebearing 30 |
 | airy, light | weight 40 to 55, sidebearing 55 |
 
+For "like <font name>" briefs, see `reference-fonts.md` and the `like-*` presets.
+
 ## Limits of the generator
 
 - Weight above about 140 closes the counters of ຄ ຕ ໜ ໝ. Lower `width` or `weight` if a counter closes.
