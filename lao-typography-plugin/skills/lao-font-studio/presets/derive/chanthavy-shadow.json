@@ -1,0 +1,10 @@
+{
+ "base": "Lao_Chanthavy.otf",
+ "family": "Chanthavy Shadow",
+ "shadow": {
+  "dx": 28,
+  "dy": -28,
+  "gap": 9
+ },
+ "tracking": 20
+}
