@@ -1,12 +1,14 @@
 {
   "name": "deeoxide-lao",
-  "owner": { "name": "Deeoxide" },
+  "owner": {
+    "name": "Deeoxide"
+  },
   "plugins": [
     {
       "name": "lao-typography",
       "source": "./lao-typography-plugin",
       "description": "Lao language, typography and font design skills, including the Lao font studio.",
-      "version": "1.0.0"
+      "version": "1.1.0"
     }
   ]
 }

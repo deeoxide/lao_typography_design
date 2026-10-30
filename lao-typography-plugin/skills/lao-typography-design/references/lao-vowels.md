@@ -1,8 +1,3 @@
----
-name: lao-vowels
-description: Topic note explaining Lao vowels (ສະຫຼະ) — positions, short/long pairs, diphthongs, special forms, the ອ carrier, and typesetting rules. Part of the Lao alphabet topic series.
----
-
 # Topic: Lao vowels (ສະຫຼະ)
 
 Lao has about **28 vowel forms**, including diphthongs. Vowels are not written as separate letters in a line. They are signs attached to a consonant. In every chart below, **ກ** stands for "any consonant".
@@ -30,7 +25,7 @@ Most Lao vowels come in **short / long pairs**. The length changes both the soun
 |---|---|---|---|
 | ກະ | ກາ | a / aa | ຕາ (eye), ປາ (fish), ຊ້າງ (elephant) |
 | ກິ | ກີ | i / ii | ລີງ (monkey), ວີ (fan) |
-| ກຶ | ກື | ɯ / ɯɯ | |
+| ກຶ | ກື | ɯ / ɯɯ | ມື (hand), ຄື (like) |
 | ກຸ | ກູ | u / uu | ຍຸງ (mosquito), ທຸງ (flag), ງູ (snake), ພູ (mountain) |
 | ເກະ | ເກ | e / ee | ເດັກ (child) |
 | ແກະ | ແກ | ɛ / ɛɛ | ແບ້ (goat), ແມວ (cat) |
