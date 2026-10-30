@@ -33,6 +33,8 @@ For Buddhist texts, Pali terms, or minority-language text, use Noto Sans Lao (th
 
 ## Using the fonts
 
+- **Install for the current user (any tool that looks fonts up by name):** `bash scripts/setup_fonts.sh` (all fonts) or `bash scripts/setup_fonts.sh default` (only Noto Sans Lao). In a sandbox with no network, this is how to get Noto Sans Lao; it cannot be downloaded there.
+- **Check a font against real text:** `python3 scripts/lao_check.py file.docx --font assets/fonts/<font file>` lists characters the font has no glyph for and warns if it has no Lao shaping tables.
 - **Python / Pillow:** `ImageFont.truetype("assets/fonts/PB-Warnjai-Bold.ttf", 48, layout_engine=ImageFont.Layout.RAQM)`. Without RAQM, marks will not position correctly.
 - **HTML / CSS:** copy the file next to the page and declare it:
   ```css

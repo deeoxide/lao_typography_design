@@ -1,8 +1,3 @@
----
-name: lao-typography
-description: Topic note on Lao typography (ການຈັດພິມພາສາລາວ) — letterform anatomy, font choice, size and spacing, alignment, line breaking, mixed scripts, numerals, and settings for CSS, Office, PDF, and design tools.
----
-
 # Topic: Lao typography (ການຈັດພິມພາສາລາວ)
 
 Lao is a **complex script**. Its letters, vowel signs, and tone marks must be shaped by the rendering engine, and the text needs more vertical space than Latin. Good Lao typography is mostly about the right font, generous spacing, and a shaping-capable tool.
@@ -53,7 +48,7 @@ Lao is a **complex script**. Its letters, vowel signs, and tone marks must be sh
 - Line breaking needs a **Lao dictionary** (ICU). Modern browsers, Word, and LibreOffice have one.
 - Add **U+200B (zero-width space)** to mark allowed break points in long strings. Use **U+2060 (word joiner)** or `white-space: nowrap` to keep names and terms together.
 - **Never break inside a syllable**, and never separate a tone mark or vowel sign from its base.
-- When truncating text in an interface, cut by word or grapheme cluster, not by byte or code unit.
+- When truncating text in an interface, cut at a word or phrase break from an ICU segmenter, never by byte or code unit. A grapheme-cluster cut is not enough: it can still leave a prefixed vowel (ເ ແ ໂ ໄ ໃ) at the end of a line, away from its consonant. A tested helper is in `unicode.md`.
 
 ## 6. Mixed scripts (Lao, Thai, English)
 
@@ -69,6 +64,8 @@ Lao is a **complex script**. Its letters, vowel signs, and tone marks must be sh
 - Right-align numbers in tables. Check that the font contains the digits you choose.
 - **Dates:** `ວັນທີ 26 ຕຸລາ 2026`. Use CE unless told to use the Buddhist Era (CE + 543).
 - **Currency:** `1,500,000 ກີບ`, `₭1,500,000`, or `LAK 1,500,000`. Keep one format.
+- **Months (CE):** ມັງກອນ (Jan), ກຸມພາ (Feb), ມີນາ (Mar), ເມສາ (Apr), ພຶດສະພາ (May), ມິຖຸນາ (Jun), ກໍລະກົດ (Jul), ສິງຫາ (Aug), ກັນຍາ (Sep), ຕຸລາ (Oct), ພະຈິກ (Nov), ທັນວາ (Dec).
+- **Weekdays:** ວັນອາທິດ (Sun), ວັນຈັນ (Mon), ວັນອັງຄານ (Tue), ວັນພຸດ (Wed), ວັນພະຫັດ (Thu), ວັນສຸກ (Fri), ວັນເສົາ (Sat).
 
 ## 8. Settings by format
 
@@ -86,7 +83,7 @@ Lao is a **complex script**. Its letters, vowel signs, and tone marks must be sh
 ```
 Use `<meta charset="utf-8">` and `lang="lo"`.
 
-**Word (.docx):** set the **complex script font** (cs) and **complex script size** (szCs), not just the Latin font. Set the language to Lao (lo-LA). Use styles, not manual formatting. Line spacing: multiple 1.5.
+**Word (.docx):** set the **complex script font** (cs) and **complex script size** (szCs), not just the Latin font. Bold Lao needs `w:bCs`, not only `w:b` (python-docx `run.bold` sets only `w:b`). Set the language to Lao (lo-LA). Use styles, not manual formatting. Line spacing: multiple 1.5. Working code is in `recipes.md`.
 
 **Excel (.xlsx):** apply Noto Sans Lao (or the font the user names) to the used range. Set row heights manually (at least 1.4 times the font size) and widen columns. Avoid merged cells for long text.
 
