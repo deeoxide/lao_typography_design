@@ -1,0 +1,5 @@
+interface:
+  display_name: "Lao Voice"
+  short_description: "Voiceover, TTS, subtitles and register"
+policy:
+  allow_implicit_invocation: true

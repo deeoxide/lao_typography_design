@@ -1,0 +1,5 @@
+interface:
+  display_name: "Lao Typography Check"
+  short_description: "Audit files for Lao typography problems"
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,20 @@
+{
+  "name": "deeoxide-lao",
+  "interface": {
+    "displayName": "Deeoxide Lao"
+  },
+  "plugins": [
+    {
+      "name": "lao-typography",
+      "source": {
+        "source": "local",
+        "path": "./plugins/lao-typography"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}
