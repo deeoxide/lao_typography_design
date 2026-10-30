@@ -1,0 +1,5 @@
+interface:
+  display_name: "Lao Font Studio"
+  short_description: "Build Lao fonts from a prompt"
+policy:
+  allow_implicit_invocation: true

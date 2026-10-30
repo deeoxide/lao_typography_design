@@ -1,0 +1,5 @@
+interface:
+  display_name: "Lao Font Designer"
+  short_description: "Choose, pair and review Lao typefaces"
+policy:
+  allow_implicit_invocation: true

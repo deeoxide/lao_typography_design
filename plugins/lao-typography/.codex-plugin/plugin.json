@@ -1,0 +1,47 @@
+{
+  "name": "lao-typography",
+  "version": "1.2.0",
+  "description": "Lao (ພາສາລາວ) language, typography and font design for professional work: translation, proofreading and typesetting with Noto Sans Lao by default, Unicode and font fixes, OCR, spoken and written voice, web and graphic design, alphabet teaching, a Lao text checker, and a font studio that builds working TTF/WOFF2 fonts from a prompt.",
+  "author": {
+    "name": "Deeoxide",
+    "url": "https://github.com/deeoxide"
+  },
+  "homepage": "https://github.com/deeoxide/lao_typography_design#readme",
+  "repository": "https://github.com/deeoxide/lao_typography_design",
+  "license": "MIT",
+  "keywords": [
+    "lao",
+    "laos",
+    "ພາສາລາວ",
+    "typography",
+    "fonts",
+    "unicode",
+    "translation",
+    "ocr",
+    "design",
+    "noto-sans-lao"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Lao Typography",
+    "shortDescription": "Lao language, type and fonts",
+    "longDescription": "Professional Lao (ພາສາລາວ) work in one plugin. Translate between Lao and English; proofread and typeset Lao in Word, PowerPoint, Excel, PDF and web pages with Noto Sans Lao by default; fix boxes, floating tone marks, Thai letters mixed into Lao, and legacy fonts; read Lao from images; prepare voiceover scripts and subtitles; design posters and brands with live Lao text; teach the alphabet; and build new Lao fonts from a prompt. Includes a checker that finds common Lao text errors in files, and tested recipes for every common format.",
+    "developerName": "Deeoxide",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/deeoxide/lao_typography_design",
+    "supportURL": "https://github.com/deeoxide/lao_typography_design/issues",
+    "defaultPrompt": [
+      "Translate this English text into natural Lao",
+      "Make a Lao price list as a Word file and a PDF",
+      "Design a Lao headline font for a festival poster"
+    ],
+    "brandColor": "#1B3F8B",
+    "brandColorDark": "#7FA6F5",
+    "composerIcon": "./assets/icon.png",
+    "logo": "./assets/logo.png"
+  }
+}

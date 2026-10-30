@@ -1,0 +1,5 @@
+interface:
+  display_name: "Lao Alphabet Teacher"
+  short_description: "Lessons and quizzes for the Lao script"
+policy:
+  allow_implicit_invocation: true

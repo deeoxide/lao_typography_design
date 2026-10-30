@@ -1,0 +1,5 @@
+interface:
+  display_name: "Lao Web Design"
+  short_description: "CSS, webfonts and layout for Lao pages"
+policy:
+  allow_implicit_invocation: true

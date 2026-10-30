@@ -38,7 +38,11 @@ Attach `lao-typography-knowledge.md`, `lao_check.py` and the Noto Sans Lao font,
 
 ## Codex and other coding agents
 
-Use [`../lao_typography_design/AGENTS.md`](../lao_typography_design/AGENTS.md): copy it to your repository root (or append it to the `AGENTS.md` you already have) and keep the `references/`, `scripts/` and `assets/` folders beside it. The repository also contains a Codex plugin manifest (`lao-typography-plugin/.codex-plugin/`).
+Install the plugin: `codex plugin marketplace add deeoxide/lao_typography_design`, then `codex plugin add lao-typography@deeoxide-lao`. Or use [`../lao_typography_design/AGENTS.md`](../lao_typography_design/AGENTS.md): copy it to your repository root (or append it to the `AGENTS.md` you already have) and keep the `references/`, `scripts/` and `assets/` folders beside it.
+
+## ChatGPT plugin upload
+
+If your ChatGPT workspace lets you upload plugins, upload [`../lao-typography-chatgpt.zip`](../lao-typography-chatgpt.zip). It contains the Codex manifest (with the required square `logo` and `composerIcon`), the 12 skills and nothing else. Do not upload a GitHub "Download ZIP" of the repository: that wraps everything in an extra folder and the uploader cannot find the manifest.
 
 ## What to expect
 

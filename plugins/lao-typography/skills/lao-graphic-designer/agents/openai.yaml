@@ -1,0 +1,5 @@
+interface:
+  display_name: "Lao Graphic Design"
+  short_description: "Posters, packaging and brands with Lao text"
+policy:
+  allow_implicit_invocation: true

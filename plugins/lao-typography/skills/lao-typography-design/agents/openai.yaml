@@ -1,0 +1,5 @@
+interface:
+  display_name: "Lao Typography"
+  short_description: "Lao script, fonts, layout rules and checker"
+policy:
+  allow_implicit_invocation: true
