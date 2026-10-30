@@ -13,7 +13,7 @@ The Lao alphabet (ອັກສອນລາວ, Akson Lao) is an abugida: each co
 
 - **Consonants:** 27 base consonant letters (often taught as 33 letters when including 6 common ຫ-digraphs). They fall into three classes (high, mid, low) that affect tone.
 - **Vowels:** 28 vowel forms and diphthongs, placed above, below, in front of, or behind consonants.
-- **Tone marks:** 4 primary tone marks placed above consonants.
+- **Tone marks:** 4 tone marks placed above consonants (two common, two rare; see the table below).
 - **Numbers:** 10 traditional Lao numerals (໐ through ໙).
 
 ## 1. Mid-class consonants (8 letters)
@@ -50,7 +50,7 @@ Carry a lower starting pitch.
 
 | Letter | Name (IPA) | Sound | Meaning |
 |---|---|---|---|
-| ຄ | ຄວາຍ (khɔɔ khuaai) | aspirated kh | buffalo |
+| ຄ | ຄໍ ຄວາຍ (khɔɔ khuaai) | aspirated kh | buffalo |
 | ງ | ງໍ ງູ (ŋɔɔ nguu) | ng (as in sing) | snake |
 | ຊ | ຊໍ ຊ້າງ (sɔɔ saang) | s | elephant |
 | ຍ | ຍໍ ຍຸງ (ɲɔɔ nyung) | ny (as in onion) | mosquito |
@@ -59,10 +59,31 @@ Carry a lower starting pitch.
 | ພ | ພໍ ພູ (phɔɔ phuu) | aspirated ph | mountain |
 | ຟ | ຟໍ ໄຟ (fɔɔ fai) | f | fire |
 | ມ | ມໍ ແມວ (mɔɔ mɛɛw) | m | cat |
-| ຣ | ຣໍ ຣົດ (rɔɔ rot) | r (trilled/flapped) | car |
+| ຣ | ຣໍ ຣົດ (rɔɔ rot) | r (trilled/flapped) | car (see note) |
 | ລ | ລໍ ລີງ (lɔɔ liing) | l | monkey |
 | ວ | ວໍ ວີ (wɔɔ wii) | w / v | traditional fan |
 | ຮ | ຮໍ ເຮືອນ (hɔɔ hɯɯan) | h | house |
+
+Note on ຣ: it is listed among the 27 letters, but in much of modern Lao spelling the sound is written with ລ instead (the vowel notes use the common spelling ລົດ for "car"). Keep whichever spelling the user's text or template uses; do not swap one for the other.
+
+## Tone marks (ວັນນະຍຸດ)
+
+| Mark | Name | Codepoint | Use |
+|---|---|---|---|
+| ່ | ໄມ້ເອກ (mai ek) | U+0EC8 | Common |
+| ້ | ໄມ້ໂທ (mai tho) | U+0EC9 | Common |
+| ໊ | ໄມ້ຕີ (mai ti) | U+0ECA | Rare (some loanwords and transcription) |
+| ໋ | ໄມ້ຈັດຕະວາ (mai catawa) | U+0ECB | Rare (some loanwords and transcription) |
+
+A tone mark sits above the consonant, or above the upper vowel sign when there is one (ກິ່ນ). The tone a syllable gets depends on the consonant class, the syllable type (live or dead, see `lao-vowels.md`), and the mark. Use a tone chart for exact pitches; do not state them from memory.
+
+## Digits
+
+| Lao | ໐ | ໑ | ໒ | ໓ | ໔ | ໕ | ໖ | ໗ | ໘ | ໙ |
+|---|---|---|---|---|---|---|---|---|---|---|
+| Western | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 |
+
+Lao digits are U+0ED0–U+0ED9. Use one numeral system per document.
 
 ## Digraphs (compound consonants)
 

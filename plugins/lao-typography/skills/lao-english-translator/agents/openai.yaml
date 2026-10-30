@@ -1,0 +1,5 @@
+interface:
+  display_name: "Lao to English"
+  short_description: "Translate Lao into clear English"
+policy:
+  allow_implicit_invocation: true

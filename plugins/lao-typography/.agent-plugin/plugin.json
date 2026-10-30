@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "lao-typography",
+  "version": "1.2.0",
+  "description": "Lao (ພາສາລາວ) language, typography and font design for professional work: translation, proofreading and typesetting with Noto Sans Lao by default, Unicode and font fixes, OCR, spoken and written voice, web and graphic design, alphabet teaching, a Lao text checker, and a font studio that builds working TTF/WOFF2 fonts from a prompt.",
+  "author": {
+    "name": "Deeoxide",
+    "url": "https://github.com/deeoxide"
+  },
+  "homepage": "https://github.com/deeoxide/lao_typography_design#readme",
+  "repository": "https://github.com/deeoxide/lao_typography_design",
+  "license": "MIT",
+  "keywords": [
+    "lao",
+    "laos",
+    "ພາສາລາວ",
+    "typography",
+    "fonts",
+    "unicode",
+    "translation",
+    "ocr",
+    "design",
+    "noto-sans-lao"
+  ]
+}
