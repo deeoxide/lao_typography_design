@@ -1,0 +1,5 @@
+interface:
+  display_name: "Lao OCR"
+  short_description: "Read Lao text from images and scans"
+policy:
+  allow_implicit_invocation: true

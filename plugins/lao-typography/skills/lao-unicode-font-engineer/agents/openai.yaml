@@ -1,0 +1,5 @@
+interface:
+  display_name: "Lao Unicode Fixer"
+  short_description: "Fix boxes, broken marks and encodings"
+policy:
+  allow_implicit_invocation: true

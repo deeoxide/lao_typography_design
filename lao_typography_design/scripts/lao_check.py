@@ -57,7 +57,7 @@ OTHER_MARK = {0x0EBA, 0x0EBC, 0x0ECC, 0x0ECD, 0x0ECE}        # ຺ ຼ ໌ ໍ �
 MARKS = UPPER | LOWER | TONE | OTHER_MARK
 SPACING_V = {0x0EB0, 0x0EB2, 0x0EB3}                         # ະ າ ຳ
 LAO_DIGITS = set(range(0x0ED0, 0x0EDA))
-PLACEHOLDERS = set("-–—◌_….")            # used in teaching charts: ເ-ະ  -ົວ  ◌໎
+PLACEHOLDERS = set("-–—◌_….+")           # used in teaching charts: ເ-ະ  -ົວ  ◌໎  ໍ+າ
 INVISIBLE = {0x200B: "ZWSP", 0x200C: "ZWNJ", 0x200D: "ZWJ", 0x2060: "WJ", 0xFEFF: "BOM", 0x00AD: "SHY"}
 SEVERITY_ORDER = {"High": 0, "Medium": 1, "Low": 2}
 
@@ -137,7 +137,8 @@ def scan_segment(rep: Report, where: str, text: str) -> None:
         pcp = ord(prev) if prev else -1
         ncp = ord(nxt) if nxt else -1
 
-        if cp == 0xFFFD or (ch == "□" and lao_here):
+        box_in_lao = ch == "□" and ((prev and is_lao(prev)) or (nxt and is_lao(nxt)))
+        if cp == 0xFFFD or box_in_lao:                 # a box only counts when it touches Lao letters
             rep.add("LAO009", "High", where, "Replacement or box character %s: the text was damaged or a font lacks the glyph" % uplus(ch), excerpt(text, i))
             continue
         if i in standalone:                       # a sign shown on its own, as in an alphabet or vowel chart
